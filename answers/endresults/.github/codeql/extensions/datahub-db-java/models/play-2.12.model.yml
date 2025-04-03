@@ -1,0 +1,22 @@
+extensions:
+  - addsTo:
+      pack: codeql/java-all
+      extensible: sourceModel
+    data:
+      - ["play.mvc","Http$Headers",true,"get","(String)","","ReturnValue","remote","manual"]
+
+  - addsTo:
+      pack: codeql/java-all
+      extensible: sinkModel
+    data:
+      - ["play.mvc","Results",true,"redirect","(String)","","Argument[0]","url-redirection","manual"]
+
+  - addsTo:
+      pack: codeql/java-all
+      extensible: summaryModel
+    data: []
+
+  - addsTo:
+      pack: codeql/java-all
+      extensible: neutralModel
+    data: []
